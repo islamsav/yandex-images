@@ -15,12 +15,6 @@ public class ImagesPage {
         findByImages.should(exist)
                 .shouldBe(visible, enabled)
                 .click();
-        try {
-            Thread.sleep(3000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        switchTo().activeElement();
         upload.toWebElement().sendKeys(path);
         return page(SummaryPage.class);
     }
